@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --primary:hsl(0, 0%, 100%);
+    --secondary: hsl(215, 51%, 70%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary);
+    font-weight: 300;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 54%, 11%);
+}
+.card{
+    background-color: hsl(216, 50%, 16%);
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-body{
+    padding: 1rem;
+}
+.card-img{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.card-img .img-one{
+    display: block;
+    width: 100%;
+}
+.card-img .img-two{
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    padding: 1rem;
+    background-color: rgba(0, 255, 247,.5);
+}
+.card-img > .img-one,
+.card-img > .img-two{
+    transition: 200ms ease-in-out;
+}
+
+.card-img > .img-two.fade{
+    opacity: 0;
+}
+.card-img:hover > .img-two.fade{
+    opacity: 1;
+}
+.card-text{
+    font-size: 1rem;
+}
+h1{
+    font-weight: 600;
+    margin: 0.5em 0;
+    cursor: pointer;
+}
+
+p{
+    color:var(--secondary);
+}
+.card-footer{
+    margin: 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.eth{
+    color: hsl(178, 100%, 50%);
+    margin-left: 3px;
+    font-weight: 400;
+}
+.time{
+    margin-left: 3px;
+    color: var(--secondary);
+}
+.divider{
+    border: 1px solid hsl(215, 32%, 27%);
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+.profile img{
+    width: 13%;
+    height: 13%;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.profile-text{
+    margin-left: 0.5em;
+    color: hsl(215, 51%, 70%);
+}
+.name{
+    cursor: pointer;
+}
+h1:hover,.name:hover{
+    color: hsl(178, 100%, 50%);
+}
+@media screen and (max-width:420px) {
+    .card{
+        width: 90%;
+    }
+}
